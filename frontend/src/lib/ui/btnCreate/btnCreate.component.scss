@@ -1,0 +1,21 @@
+.createButton {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.1s;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.symbol {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1%;
+  opacity: 1;
+}
+.createButton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

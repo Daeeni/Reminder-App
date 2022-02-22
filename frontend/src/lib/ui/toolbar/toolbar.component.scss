@@ -1,0 +1,20 @@
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  height: 45px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background-color: #2b2b2b;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toolbar img {
+  margin: 0 16px;
+  filter: invert(1);
+}

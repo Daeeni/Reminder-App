@@ -1,0 +1,20 @@
+<div *ngIf="listObject" class="viewContainer">
+  <div class="title"><span>{{this.listObject.value}}</span><span>{{this.listObject.items.length}}</span> </div>
+  <div class="item">
+    <item *ngFor="let item of listObject.items"
+    (onItemDelete)="deleteItem($event)"
+    (onItemChange)="changeItem($event)"
+    [itemObject]="item"
+    [selectedOnCreate]="item == selectedItem"
+    color="{{ this.color }}"
+    ></item>
+  </div>
+  <create *ngIf="listObject.id != -1 && listObject.id != -2"
+    (onCreateButton)="createItem($event)"
+    backgroundColor="#454343"
+    borderRadius="30px"
+    height="30px"
+    opacity="1"
+  ></create>
+  <span *ngIf="listObject.id != -1 && listObject.id != -2" class="text">Add Note</span>
+</div>

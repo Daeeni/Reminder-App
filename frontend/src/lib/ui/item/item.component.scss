@@ -1,0 +1,99 @@
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+@-moz-document url-prefix() {
+  .iconCalender {
+    width: 16px;
+    content: url('../../../assets/calendar.png');
+    filter: invert(1);
+    position: relative;
+    left: -814px;
+    top: 36px;
+  }
+}
+.item {
+  display: flex;
+  border-radius: 10px;
+  background: rgba(#b3b3b3, 0.3);
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  margin: 1% 0%;
+  width: 1150px;
+  height: 75px;
+  left: 50px;
+  position: relative;
+}
+.item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.text {
+  margin-left: 13px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  width: 90%;
+  height: 30px;
+  outline: none;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: -10px;
+}
+.date {
+  position: relative;
+  top: 18px;
+  left: -930px;
+  width: 150px;
+  background: transparent;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.btnFlagged {
+  display: block;
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  position: relative;
+  left: -50px;
+  cursor: pointer;
+}
+.btnFlagged:hover {
+  text-shadow: 0 0px 15px black;
+}
+.flaggedColorDefault {
+  content: url('../../../assets/flag-item.png');
+  filter: invert(1);
+}
+.flaggedColorPressed {
+  content: url('../../../assets/flag-item-filled.png');
+  filter: invert(1);
+}
+.iconDelete {
+  display: block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  filter: invert(1);
+}
+.btnDelete {
+  display: block;
+  height: 35px;
+  width: 35px;
+  border-radius: 80%;
+  position: relative;
+  left: -50px;
+  cursor: pointer;
+  color: white;
+}
+.btnDelete:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.deleteColorDefault {
+  background-color: rgba(#b3b3b3, 0.3);
+}
+.deleteColorPressed {
+  background-color: rgb(0, 182, 0);
+}

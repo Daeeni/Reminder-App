@@ -1,0 +1,29 @@
+<div class="item" >
+  <div class ="btnDelete"
+    (click)="toggleDeleteBtn()"
+    [ngClass]= "{'deleteColorDefault' : !delete, 'deleteColorPressed': delete}">
+      <img class = "iconDelete"
+        src="../../../assets/check-mark.png"
+      />
+  </div>
+  <input
+    class = "text"
+    #myInput
+    type="title"
+    [value]="itemObject.value"
+    (change)="editValue($event)">
+  <div>
+    <div class = "iconCalender"></div>
+    <input
+    class="date"
+    #myDate
+    type="date"
+    [value]="itemObject.date"
+    (change)="editDate($event)">
+  </div>
+  <div
+    (click)="toggleFlaggedBtn()"
+    [ngClass]= "{'flaggedColorDefault' : !itemObject.flagged, 'flaggedColorPressed': itemObject.flagged}"
+    class ="btnFlagged">
+  </div>
+</div>

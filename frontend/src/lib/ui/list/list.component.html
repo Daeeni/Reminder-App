@@ -1,0 +1,12 @@
+<div class="list">
+  <div class="view"
+  (click)="clickToViewerComm()"
+  [ngClass]= "{'viewColorDefault' : !this.currentlyViewed, 'viewColorPressed': this.currentlyViewed}">
+  </div>
+  <input
+    type="text"
+    #myInput
+    value="{{ listObject.value }}"
+    (change)="editValue($event)">
+  <div class="title"><span>{{listObject.items.length}}</span></div>
+</div>

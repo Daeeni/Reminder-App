@@ -1,0 +1,112 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  min-height: 96vh;
+}
+.listBar {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  background-color: #2b2b2b;
+  opacity: 1;
+}
+.boardLists {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+list {
+  padding: 3px;
+}
+create {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 30px;
+  color: white;
+}
+.text {
+  position: fixed;
+  bottom: 15px;
+  left: 50px;
+  color: white;
+}
+.boxContainer {
+  align-self: center;
+  width: 340px;
+  height: 80px;
+  display: flex;
+  padding: 0.1rem;
+  justify-content: space-between;
+  margin: 5px;
+  flex-direction: row;
+}
+.box {
+  border-radius: 5px;
+  background: rgba(#b3b3b3, 0.1);
+  width: 160px;
+  height: 80px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  color: white;
+  outline-color: #9c9c9c;
+  outline-width: 2px;
+  outline-style: solid;
+}
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.titleFlag {
+  position: relative;
+  top: 20px;
+  left: 72px;
+}
+.countFlag {
+  position: relative;
+  right: -70px;
+  top: -8px;
+  font-size: 15px;
+}
+.flagIcon {
+  height: 60px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 70px;
+  left: 210px;
+}
+.flagIconDefault {
+  content: url('../../../assets/flag-list.png');
+  filter: invert(1);
+}
+.flagIconFilled {
+  filter: invert(1);
+  content: url('../../../assets/flag-list-filled.png');
+}
+.titleToday {
+  position: relative;
+  top: 20px;
+  left: 85px;
+}
+.countToday {
+  position: relative;
+  right: -90px;
+  top: -8px;
+  font-size: 15px;
+}
+.todayIcon {
+  height: 55px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 70px;
+  left: 35px;
+}
+.todayIconDefault {
+  content: url('../../../assets/calendar-list.png');
+  filter: invert(1);
+}
+.todayIconFilled {
+  content: url('../../../assets/calendar-list-filled.png');
+  filter: invert(1);
+}

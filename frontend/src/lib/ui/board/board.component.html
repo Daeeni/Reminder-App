@@ -1,0 +1,49 @@
+<div class="board">
+  <div class= "listBar">
+    <div class="boxContainer">
+      <div
+        (click)= "todayToViewer()"
+        class="box">
+        <span class="titleToday">Today</span>
+        <span class="countToday">{{todayFilter.items.length}}</span>
+        <div class = "todayIcon"
+        [ngClass]= "{'todayIconDefault' : !viewToday, 'todayIconFilled': viewToday}"
+        ></div>
+      </div>
+      <div
+        (click)= "flaggedToViewer()"
+        class="box">
+        <span class="titleFlag">Flagged</span>
+        <span class="countFlag">{{flaggedFilter.items.length}}</span>
+        <div class = "flagIcon"
+        [ngClass]= "{'flagIconDefault' : !viewFlagged, 'flagIconFilled': viewFlagged}"
+        ></div>
+
+      </div>
+    </div>
+    <div class="boardLists" >
+      <list *ngFor="let list of boardObject.lists"
+        (onToViewEvent)="listToViewer($event)"
+        [listObject]="list"
+        [selectedOnCreate]="list == selectedList"
+      ></list>
+      <div class="boardLists">
+          <create
+            (onCreateButton)="createList($event)"
+            backgroundColor="#454343"
+            borderRadius="30px"
+            height="30px"
+            opacity="1"
+          ></create>
+          <span class="text">Add List</span>
+      </div>
+    </div>
+  </div>
+  <viewer
+  [(listObject)]="this.curViewedList"
+  (doItemFilterChange)="changeItemFilter($event)"
+  (doItemSearchAndChange)="searchAndChangeItem($event)"
+  (doItemDelete)="removeItemFilter($event)"
+  itemCounter="{{this.itemCounter}}"
+  ></viewer>
+</div>

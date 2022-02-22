@@ -1,0 +1,74 @@
+.list {
+  width: 320px;
+  height: auto;
+  min-height: 25px;
+  background-color: rgba(#b3b3b3, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  outline-color: #9c9c9c;
+  outline-width: 2px;
+  outline-style: solid;
+}
+.list:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.addItem {
+  display: flex;
+  border-radius: 10px;
+  background: rgba(#ffffff, 0.85);
+  align-items: center;
+  margin: 1% 0%;
+  width: 250px;
+  height: 25px;
+}
+.title {
+  display: flex;
+  position: relative;
+  right: -150px;
+  font-size: 20px;
+  color: white;
+  height: 0px;
+  top: -22px;
+}
+input {
+  outline: none;
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 120%;
+  outline: none;
+  height: 20px;
+  width: 210px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  position: absolute;
+}
+.list #delete {
+  height: 0px;
+  position: relative;
+  margin-left: auto;
+  top: -20px;
+  filter: invert(1);
+}
+.view {
+  position: relative;
+  left: -140px;
+  top: 0px;
+  height: 25px;
+  cursor: pointer;
+}
+.viewColorDefault {
+  content: url('../../../assets/notes-list.png');
+  filter: invert(1);
+}
+.viewColorPressed {
+  content: url('../../../assets/notes-list-filled.png');
+  filter: invert(1);
+}
